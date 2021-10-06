@@ -1,0 +1,40 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    ext {
+        kotlin_version = KOTLIN_VERSION
+        room_version = ROOM_VERSION
+        retrofit_version = RETROFIT_VERSION
+        okhttp_logging_iterceptor_version = OKHTTP3LOGINTERCEPTOR_VERSION
+        okhttp_version = OKHTTP_VERSION
+        retrofit_moshi_converter_version = RETROFIT_MOSHI_CONVERTER_VERSION
+        moshi_version = MOSHI_VERSION
+        coroutines_version = COROUTINES_VERSION
+        coroutines_adapter_version = COROUTINES_ADAPTER_VERSION
+        timber_version = TIMBER_VERSION
+        fragmentKtx_version = FRAGMENT_KTX_VERSION
+        viewModelKtx_version = VIEWMODEL_KTX_VERSION
+        glide_version = GLIDE_VERSION
+    }
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.1.0"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
