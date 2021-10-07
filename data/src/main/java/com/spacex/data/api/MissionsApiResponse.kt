@@ -21,4 +21,4 @@ data class Item(
 
 data class ApiLinks(val patch: ImageLinks)
 
-data class ImageLinks(val small: String?, val large: String?)
+data class ImageLinks(val small: String?)
